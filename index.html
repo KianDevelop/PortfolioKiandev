@@ -1,121 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Kiandev | Desarrollador Web & Programador</title>
-    <meta name="description" content="Portfolio de Kiandev (Gian). Desarrollador Web y Programador en Argentina. Sitios modernos, soluciones digitales y diseño web a medida.">
-    <meta name="keywords" content="Kiandev, Gian, Desarrollador Web, Programador, Diseño Web, Argentina, Entre Ríos, HTML, CSS, JavaScript, Profe de Música">
-    <meta name="author" content="Kiandev">
-    
-    <meta name="google-site-verification" content="ZK3Hgx_VF8Zfcw6RBgoQqhKkfT3AhhgAYtBaX0lh9ZM" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="og:title" content="Kiandev | Desarrollador Web">
-    <meta property="og:description" content="Echale un vistazo a mis proyectos y contactame para tu próxima web.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.kiandev.com.ar">
-    <link rel="canonical" href="https://www.kiandev.com.ar">
+  <title>Kiandev Studio | Ingeniería Web de Alto Rendimiento para Empresas</title>
+  <meta
+    name="description"
+    content="Kiandev Studio diseña y desarrolla sitios web corporativos, landing pages y aplicaciones a medida de alto rendimiento. Optimizado para Google Web Core Vitals, velocidad extrema y conversión de clientes."
+  />
+  <meta name="author" content="Kiandev Studio" />
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="img/logos/Isologo.jpg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
+  <meta
+    name="google-site-verification"
+    content="ZK3Hgx_VF8Zfcw6RBgoQqhKkfT3AhhgAYtBaX0lh9ZM"
+  />
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="Kiandev Studio | Ingeniería Web de Alto Rendimiento" />
+  <meta
+    property="og:description"
+    content="Desarrollamos soluciones digitales sólidas que impulsan la reputación de tu empresa, mejoran procesos operativos e incrementan de forma medible la tasa de conversión."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.kiandev.com.ar" />
+  <link rel="canonical" href="https://www.kiandev.com.ar" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="icon"
+    href="img/logos/Isologo.jpg"
+    type="image/jpeg"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- React + Babel desde CDN (compatible con GitHub Pages de forma estática) -->
+  <script
+    src="https://unpkg.com/react@18/umd/react.development.js"
+    crossorigin
+  ></script>
+  <script
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+  <div id="root"></div>
 
-    <nav class="navbar">
-        <div class="logo">Kian<span>Dev</span></div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
-
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Hola, soy <span class="highlight">Gian</span></h1>
-            <h2>(a.k.a KianDev)</h2>
-            <p>Soy <span class="typed-text"></span><span class="cursor">_</span></p>
-            <a href="#proyectos" class="btn">Ver mi trabajo</a>
-        </div>
-    </section>
-
-    <section id="sobre-mi" class="container">
-        <h2>Sobre Mí</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>
-                    ¡Hola! Soy un desarrollador web en formación con una trayectoria única. 
-                    Vengo del mundo de la música (soy <strong>profesor</strong>), lo que me enseñó la disciplina y la atención al detalle que ahora aplico al código.
-                </p>
-                <p>
-                    Cuando no estoy maquetando webs con <strong>HTML, CSS y JavaScript</strong>, probablemente me encuentres jugando videojuegos o explorando nuevas tecnologías. Mi objetivo es crear experiencias web limpias, funcionales y atractivas.
-                </p>
-            </div>
-            <div class="skills">
-                <h3>Mis Herramientas</h3>
-                <div class="skill-tag">HTML5</div>
-                <div class="skill-tag">CSS3</div>
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">Git/GitHub</div>
-                <div class="skill-tag">Figma</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="proyectos" class="container">
-        <h2>Mis Proyectos</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Hotel El Tague</h3>
-                    <p>Sitio web informativo para un hotel local. Diseño responsive y moderno enfocado en la experiencia del usuario.</p>
-                    <div class="tech-stack">
-                        <span>HTML</span><span>CSS</span><span>JS</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Wizard Marketplace</h3>
-                    <p>Plataforma web educativa (Proyecto en desarrollo). Un espacio pensado para recursos de enseñanza.</p>
-                    <div class="tech-stack">
-                        <span>Web Design</span><span>UI/UX</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>KianDev Portfolio</h3>
-                    <p>Este mismo sitio. Un espacio minimalista para mostrar mi crecimiento profesional.</p>
-                    <div class="tech-stack">
-                        <span>HTML</span><span>CSS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contacto">
-        <p>¿Tenés una idea? Hablemos.</p>
-        <p><a href="mailto:contacto@kiandev.com.ar" style="color: inherit; text-decoration: none;">contacto@kiandev.com.ar</a></p>
-        <div class="socials">
-            <p>&copy; 2026 KianDev. Hecho en Argentina 🇦🇷</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- App en React -->
+  <script type="text/babel" src="script.js"></script>
 </body>
 </html>
